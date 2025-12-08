@@ -1,0 +1,31 @@
+package com.tcs.sample.constructor;
+
+public class Student {
+	int sno;
+	String sname;
+	int m1;
+	int m2;
+	int m3;
+	
+	public Student(int sno, String sname) {
+		this.sno = sno;
+		this.sname = sname;
+	}
+	
+	void setMarks(int m1, int m2, int m3) {
+		this.m1 = m1;
+		this.m2 = m2;
+		this.m3 = m3;
+	}
+	
+	void displayStDetails() {
+		System.out.println(sno + " " + sname);
+	}
+	void displayPer() {
+		System.out.println(m1 + " " + m2 +  " " + m3);
+		System.out.println((m1 + m2 + m3)/3);
+	}
+	static void displaySchoolAdd() {
+		System.out.println("TCS Adibatla, 501015");
+	}
+}

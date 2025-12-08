@@ -1,0 +1,14 @@
+package com.tcs.handson.constructor;
+
+public class Student extends Person {
+	
+	int stno;
+	String stAdd;
+	public Student(String fname, String lname, int stno, String stAdd) {
+		super(fname, lname);
+		this.stno = stno;
+		this.stAdd = stAdd;
+	}
+	
+	
+}

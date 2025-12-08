@@ -1,0 +1,15 @@
+package com.tcs.handson.constructor;
+
+public class Trainer extends Person {
+	String sun;
+	int sal;
+	String type;
+	public Trainer(String fname, String lname, String sun, int sal, String type) {
+		super(fname, lname);
+		this.sun = sun;
+		this.sal = sal;
+		this.type = type;
+	}
+	
+	
+}

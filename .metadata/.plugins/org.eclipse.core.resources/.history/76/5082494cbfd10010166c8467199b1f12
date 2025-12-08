@@ -1,0 +1,8 @@
+package com.tcs.sample.interfaceex;
+
+public class ExBank {
+	public static void main(String[] args) {
+		RBI b1 = new Icici();
+		b1.deposit();
+	}
+}

@@ -1,0 +1,13 @@
+package com.tcs.sample.constructor;
+
+
+public class Sample {
+	public static void main(String[] args) {
+		Employee e1 = new Employee();
+		Employee e2 = new Employee(1, "navin", 25000);
+		
+		
+		System.out.println(e1.toString());
+		System.out.println(e2.toString());
+	}
+}

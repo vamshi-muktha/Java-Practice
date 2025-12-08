@@ -1,0 +1,22 @@
+package com.tcs.sample.constructor;
+
+public class Account {
+	int accNo;
+	String accName;
+	int bal;
+	String ifsc;
+	public Account(int accNo, String accName, int bal, String ifsc) {
+		this.accNo = accNo;
+		this.accName = accName;
+		this.bal = bal;
+		this.ifsc = ifsc;
+	}
+	public Account(int accNo, String accName) {
+		this(accNo, accName, 0, null);
+	}
+	public Account(int accNo, String accName, int bal) {
+		this(accNo, accName, bal, null);
+	}
+	
+	
+}

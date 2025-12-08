@@ -1,0 +1,26 @@
+package com.tcs.sample.access;
+
+public class C1 {
+	
+	
+	public int a;
+	private int b;
+	protected int c;
+	int d;
+	
+	final void finalMethod() {
+		System.out.println("This is Final Method");
+	}
+	
+	
+	public static void main(String[] args) {
+		final int a = 10;
+		a = 11;
+		
+		C1 obj = new C1();
+		System.out.println(obj.a);
+		System.out.println(obj.b);
+		System.out.println(obj.c);
+		System.out.println(obj.d);
+	}
+}

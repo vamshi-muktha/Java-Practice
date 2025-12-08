@@ -1,0 +1,5 @@
+package com.tcs.sample.abstractex;
+
+public abstract class subOperator {
+	abstract void ope(int a, int b);
+}

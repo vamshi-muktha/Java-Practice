@@ -1,0 +1,11 @@
+package com.tcs.handson.inheritence;
+
+public class ExPerson {
+	public static void main(String[] args) {
+		Student s1 = new Student("Vamshi", "Krishna", 1, "TCS Adibatla");
+		Trainer t1 = new Trainer("Rajesh", "Kumar", "Java", 100000, "Temp");
+		s1.display();
+		System.out.println(s1.toString());
+		System.out.println(t1.toString());
+	}
+}

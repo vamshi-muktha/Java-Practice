@@ -1,0 +1,18 @@
+package com.tcs.handson.constructor;
+
+public class ExEmp {
+	public static void main(String[] args) {
+		Emp e1 = new Emp();
+		Emp e2 = new Emp();
+		
+		System.out.println(e1.toString());
+		System.out.println(e2.toString());
+		
+		Emp e3 = new Emp(101, "navin", 10000, "Temperory");
+		Emp e4 = new Emp(102, "Ram", 700000, "Permanent");
+		
+		System.out.println(e3.toString());
+		System.out.println(e4.toString());
+		
+	}
+}

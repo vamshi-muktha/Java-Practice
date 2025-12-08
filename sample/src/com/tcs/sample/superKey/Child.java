@@ -1,0 +1,11 @@
+package com.tcs.sample.superKey;
+
+public class Child extends Parent {
+	Child(){
+		System.out.println("This is child default");
+	}
+	Child(int a, int b){
+		super(a, b);
+		System.out.println("This is child parameter");
+	}
+}

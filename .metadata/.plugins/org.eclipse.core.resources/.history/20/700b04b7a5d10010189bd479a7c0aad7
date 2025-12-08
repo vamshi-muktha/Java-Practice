@@ -1,0 +1,20 @@
+package com.tcs.handson.inheritence;
+
+public class Trainer extends Person {
+	String sun;
+	int sal;
+	String type;
+	public Trainer(String fname, String lname, String sun, int sal, String type) {
+		super(fname, lname);
+		this.sun = sun;
+		this.sal = sal;
+		this.type = type;
+	}
+	@Override
+	public String toString() {
+		return "Trainer [sun=" + sun + ", sal=" + sal + ", type=" + type + ", fname=" + getFname() + ", lname=" + getLname()
+				+ "]";
+	}
+	
+	
+}

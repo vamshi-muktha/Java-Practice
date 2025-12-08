@@ -1,0 +1,5 @@
+package com.tcs.sample.exceptions;
+
+public class ValidateUser {
+
+}

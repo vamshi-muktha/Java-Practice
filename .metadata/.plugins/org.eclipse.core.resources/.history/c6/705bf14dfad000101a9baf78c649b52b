@@ -1,0 +1,17 @@
+package com.tcs.sample.access;
+import com.tcs.sample.access.C1;
+public class ExC1 {
+	
+	void m1{
+		System.out.println(c);
+	}
+	public static void main(String[] args) {
+		C1 obj = new C1();
+		System.out.println(obj.a);
+		System.out.println(obj.b);
+		System.out.println(obj.c);
+		System.out.println(obj.d);
+		System.out.println(c);
+		
+	}
+}

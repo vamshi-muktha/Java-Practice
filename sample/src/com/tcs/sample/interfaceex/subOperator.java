@@ -1,0 +1,7 @@
+package com.tcs.sample.interfaceex;
+
+public class subOperator implements Operator {
+	public void ope(int a, int b) {
+		System.out.println("Sub is : " +  (a - b));
+	}
+}

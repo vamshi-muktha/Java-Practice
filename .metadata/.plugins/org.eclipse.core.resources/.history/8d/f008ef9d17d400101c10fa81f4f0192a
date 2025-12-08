@@ -1,0 +1,5 @@
+package com.tcs.handson.exception;
+
+public class PasswordException {
+
+}

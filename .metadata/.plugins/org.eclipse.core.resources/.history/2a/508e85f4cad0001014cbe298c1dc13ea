@@ -1,0 +1,16 @@
+package com.tcs.sample.basics;
+
+public class Employee {
+	int eno;
+	String ename;
+	int sal;
+	
+	void setValues (int no, String name, int salary) {
+		eno = no;
+		ename = name;
+		sal = salary;
+	}
+	void displayInfo() {
+		System.out.println(eno + " " + ename + " " + sal);
+	}
+}

@@ -1,0 +1,169 @@
+package com.tcs.sample.string;
+
+import java.util.HashMap;
+
+public class StringHelperFunctions {
+	void printNameAndCountry(String s) {
+		String[] arr = s.split(":");
+		String[] arr2 = s.split(" ");
+		System.out.println("Name = " + arr[0]);
+		System.out.println("Country = " + arr2[arr2.length - 1]);
+		
+	}
+
+	public void findMax(String s1, String s2) {
+		// TODO Auto-generated method stub
+		String arr[] = s1.split("#");
+		String arr2[] = s2.split("#");
+		
+		int max = 0;
+		String ans = "";
+		for(int i = 0; i < arr.length; i++) {
+			try {
+				int x = Integer.parseInt(arr[i]);
+				if(x > max) {
+					x = max;
+					ans = arr[0];
+				}
+			}
+			catch(Exception e){
+				
+			}
+		}
+		for(int i = 0; i < arr2.length; i++) {
+			try {
+				int x = Integer.parseInt(arr2[i]);
+				if(x > max) {
+					x = max;
+					ans = arr2[0];
+				}
+			}
+			catch(Exception e){
+				
+			}
+		}
+		System.out.println(ans);
+	}
+
+	public void concat(String s1, String s2) {
+		// TODO Auto-generated method stub
+		if(s1.length() > s2.length()) {
+			concat(s2, s1);
+			return;
+		}
+		if(s1.length() == s2.length()) {
+			System.out.println(s1.concat(s2));
+		}
+		else {
+			System.out.println(s1.concat(s2.substring(0, s1.length()-1)));
+		}
+	}
+
+	public int countVowels(String s1) {
+		char[] arr = s1.toCharArray();
+		int cnt = 0;
+		for(char c : arr) {
+			if(c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u' || c == 'A' || c == 'E' || c == 'I' || c == 'O' || c == 'U') {
+				cnt ++;
+			}
+		}
+		return cnt;
+	}
+
+	public int sumOfDigits(String s) {
+		// TODO Auto-generated method stub
+		char[] arr = s.toCharArray();
+		int sum = 0;
+		for(char c : arr) {
+			if(Character.isDigit(c)) {
+				sum += c - '0';
+			}
+		}
+		
+		return sum;
+		
+	}
+
+	public void exchange(String s) {
+		// TODO Auto-generated method stub
+		System.out.println(s.charAt(s.length() - 1) + s.substring(1, s.length() - 1) + s.charAt(0));
+		
+	}
+
+	public String findMax(String s) {
+		// TODO Auto-generated method stub
+		String arr[] = s.split(" ");
+		String max = "";
+		for(int i = 0; i < arr.length; i++) {
+			if(arr[i].length() > max.length()) {
+				max = arr[i];
+			}
+		}
+		return max;
+	}
+
+	public boolean isPolindrome (String s) {
+		// TODO Auto-generated method stub
+		StringBuilder str = new StringBuilder(s);
+		str.reverse().toString();
+		if(s.equals(str))return true;
+		return false;
+	}
+
+	public int count(String s) {
+		// TODO Auto-generated method stub
+		String[] arr = s.split(" ");
+		return arr.length;
+	}
+	
+	public int findTcsEmails(String[] arr) {
+		int cnt = 0;
+		for(int i = 0; i < arr.length; i++) {
+			if(arr[i].endsWith("tcs.com"))cnt++;
+		}
+		return cnt;
+		
+	}
+
+	public String hiBye(String s) {
+		// TODO Auto-generated method stub
+		StringBuilder ans = new StringBuilder();
+		String[] arr = s.split(" ");
+		for(String str : arr) {
+			if(str.equals("Hi"))
+				ans.append(" Bye");
+			else if(str.equals("Bye"))
+				ans.append(" Hi");
+			else
+				ans.append(" " + str);
+		}
+		ans.insert(s.length()/2, " OK ");
+		return ans;
+	}
+
+	public String findCap(String[] arr, String s) {
+		// TODO Auto-generated method stub
+		HashMap<String, String> hm = new HashMap<>();
+		for(String str: arr) {
+			String temp[] = str.split("_");
+			hm.put(temp[0], temp[1]);
+		}
+		return hm.get(s);
+	}
+	
+	public boolean validateEmail(String s) {
+		String[] arr = s.split("@");
+		if(!s.contains("@") || !s.contains("."))return false;
+		if(arr.length != 2)return false;
+		if(arr[0].length() < 3)return false;
+		if(!s.endsWith(".com"))return false;
+//		System.out.println(arr[1].split("\\.").length);
+		if(arr[1].split("\\.")[0].length() != 5)return false;
+		
+		return true;
+	}
+	
+	
+	
+}
+;
