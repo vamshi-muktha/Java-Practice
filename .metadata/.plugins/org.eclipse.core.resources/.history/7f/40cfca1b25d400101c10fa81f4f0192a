@@ -17,7 +17,6 @@ public class ExPassword {
 			
 		} catch (PasswordException e) {
 			System.err.println("Invalid pass");
-			
 		}
 		
 		sc.close();
