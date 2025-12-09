@@ -1,0 +1,19 @@
+package com.tcs.handson.collections;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class ExCollections {
+	public static void main(String[] args) {
+		List<Account> al= new ArrayList<>();
+		al.add(new Account(1, "vamshi", 100));
+		al.add(new Account(2, "virat", 200));
+		al.add(new Account(1, "dhoni", 500));
+		al.add(new Account(1, "rohit", 50));
+		al.add(new Account(1, "washi", 90));
+		
+		for(Account ac : al) {
+			System.out.println(ac.toString());
+		}
+	}
+}

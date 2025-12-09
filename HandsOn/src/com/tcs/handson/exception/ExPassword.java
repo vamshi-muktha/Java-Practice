@@ -10,6 +10,8 @@ public class ExPassword {
 		System.out.println("Enter pass");
 		String pass = sc.next();
 		
+	
+		
 		ValidatePassword vu = new ValidatePassword();
 		
 		try {

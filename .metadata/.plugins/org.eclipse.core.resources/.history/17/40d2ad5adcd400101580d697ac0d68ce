@@ -1,0 +1,45 @@
+package com.tcs.handson.collections;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+public class ExCollections {
+	public static void main(String[] args) {
+		List<Account> al= new ArrayList<>();
+		al.add(new Account(5, "vamshi", 100));
+		al.add(new Account(2, "virat", 200));
+		al.add(new Account(10, "dhoni", 500));
+		al.add(new Account(11, "rohit", 50));
+		al.add(new Account(18, "washi", 90));
+		
+		for(Account ac : al) {
+			System.out.println(ac.toString());
+		}
+		
+		System.out.println("Sort based on accNo-----------------");
+		
+		Collections.sort(al, (a, b) -> a.getAccNo() - b.getAccNo());
+		
+		for(Account ac : al) {
+			System.out.println(ac.toString());
+		}
+		
+		System.out.println("Sort based on bal-----------------");
+		
+		Collections.sort(al, (a, b) -> a.getBal() - b.getBal());
+		
+		for(Account ac : al) {
+			System.out.println(ac.toString());
+		}
+		
+		
+System.out.println("Sort based on accNo and balance-----------------");
+		
+		Collections.sort(al, (a, b) -> a.getBal() == b.getBal() ? (a.getAccNo() - b.getAccNo()) : (a.getAccNo() - b.getAccNo()));
+		
+		for(Account ac : al) {
+			System.out.println(ac.toString());
+		}
+	}
+}

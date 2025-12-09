@@ -22,28 +22,28 @@ public class BankApp {
 			int inp = sc.nextInt();
 			
 			switch(inp) {
-			case 1:
-				createAccount();
-				break;
-			case 2:
-				System.out.print("Enter amount to credit : ");
-				int amt = sc.nextInt();
-				acc.credit(amt);
-				break;
-			case 3:
-				System.out.print("Enter amount to debit : ");
-				int amt1 = sc.nextInt();
-				acc.debit(amt1);
-				break;
-			case 4:
-				acc.getDetails();
-				break;
-			case 5:
-				System.out.println("Successfully logged out");
-				break outer;
-			default:
-				System.out.println("Choose correctly");
-				break;
+				case 1:
+					createAccount();
+					break;
+				case 2:
+					System.out.print("Enter amount to credit : ");
+					int amt = sc.nextInt();
+					acc.credit(amt);
+					break;
+				case 3:
+					System.out.print("Enter amount to debit : ");
+					int amt1 = sc.nextInt();
+					acc.debit(amt1);
+					break;
+				case 4:
+					acc.getDetails();
+					break;
+				case 5:
+					System.out.println("Successfully logged out");
+					break outer;
+				default:
+					System.out.println("Choose correctly");
+					break;
 			}
 		}
 //		sc.close();
