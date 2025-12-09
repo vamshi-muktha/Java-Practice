@@ -1,0 +1,17 @@
+package com.tcs.assessment.week2;
+
+public class CurrentAccount extends Account{
+
+	@Override
+	void deposit(int amt) {
+		System.out.println("Min deposit is 1000 and max is 1L");
+		
+	}
+
+	@Override
+	void withdraw(int amt) {
+		System.out.println("Min withdraw is 1000 nad max is 1L");
+		
+	}
+
+}

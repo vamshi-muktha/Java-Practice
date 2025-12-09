@@ -1,0 +1,51 @@
+package com.tcs.assessment.week2;
+
+public abstract class Account {
+	private int accNo;
+	private String aname;
+	private int bal;
+	private String type;
+	
+	
+	public Account(int accNo, String aname, int bal, String type) {
+		super();
+		this.accNo = accNo;
+		this.aname = aname;
+		this.bal = bal;
+		this.type = type;
+	}
+	public int getAccNo() {
+		return accNo;
+	}
+	public void setAccNo(int accNo) {
+		this.accNo = accNo;
+	}
+	public String getAname() {
+		return aname;
+	}
+	public void setAname(String aname) {
+		this.aname = aname;
+	}
+	public int getBal() {
+		System.out.println(bal);
+	}
+	public void setBal(int bal) {
+		this.bal = bal;
+	}
+	public String getType() {
+		return type;
+	}
+	public void setType(String type) {
+		this.type = type;
+	}
+	
+	void showBal() {
+		System.out.println("Your balance is 1000");
+	}
+	
+	abstract void deposit(int amt);
+	abstract void withdraw(int amt);
+	
+	
+	
+}

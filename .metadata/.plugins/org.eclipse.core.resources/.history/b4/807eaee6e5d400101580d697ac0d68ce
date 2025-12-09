@@ -1,0 +1,17 @@
+package com.tcs.assessment.week2;
+
+public class SavingsAccount extends Account {
+
+	@Override
+	void deposit(int amt) {
+		System.out.println("Min deposit is 100");
+		
+	}
+
+	@Override
+	void withdraw(int amt) {
+		System.out.println("Min withdraw is 100");
+		
+	}
+	
+}
