@@ -1,6 +1,6 @@
 package com.tcs.sample.exceptions;
 
-public class ThrowEx {
+public class ExThrow {
 	public static void main(String[] args) {
 		try {
 			ThrowExample te = new ThrowExample();

@@ -20,7 +20,7 @@ public class CurrentAccount extends Account{
 
 	@Override
 	void withdraw(int amt) {
-		if(amt < 100 || amt > 100000)System.out.println("Min is 100 and max is 1L");
+		if(amt < 100 || amt > 500000)System.out.println("Min is 100 and max is 5L");
 		if(amt > this.getBal())System.out.println("your balance is " + this.getBal() + "please withdraw within your balance");
 		this.setBal(this.getBal() - amt);
 		

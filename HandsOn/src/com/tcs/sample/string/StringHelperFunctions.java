@@ -106,7 +106,7 @@ public class StringHelperFunctions {
 		// TODO Auto-generated method stub
 		StringBuilder str = new StringBuilder(s);
 		str.reverse().toString();
-		if(s.equals(str)) {
+		if(s.equals(str.toString())) {
 			return true;
 		}
 		return false;

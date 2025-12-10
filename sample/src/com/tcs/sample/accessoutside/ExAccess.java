@@ -1,4 +1,4 @@
-package com.tcs.sample.constructor;
+package com.tcs.sample.accessoutside;
 
 //import com.tcs.sample.access.C1;
 

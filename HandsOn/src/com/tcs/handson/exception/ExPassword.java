@@ -9,20 +9,22 @@ public class ExPassword {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter pass");
 		String pass = sc.next();
-		
-	
-		
+
+
+
 		ValidatePassword vu = new ValidatePassword();
-		
+
 		try {
-			if(vu.validate(pass))System.out.println("Welcome to the Application");
-			
+			if(vu.validate(pass)) {
+				System.out.println("Welcome to the Application");
+			}
+
 		} catch (PasswordException e) {
 			System.err.println("Invalid pass");
-			
-			
+
+
 		}
-		
+
 		sc.close();
 	}
 }

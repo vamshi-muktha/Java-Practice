@@ -8,5 +8,5 @@ public class AccountCustsort implements Comparator<Account> {
 	public int compare(Account o1, Account o2) {
 		return o1.getCustId().compareTo(o2.getCustId());
 	}
-	
+
 }

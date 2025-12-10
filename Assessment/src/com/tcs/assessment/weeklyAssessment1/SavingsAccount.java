@@ -9,15 +9,15 @@ public class SavingsAccount extends Account {
 
 	@Override
 	void deposit(int amt) {
-		if(amt < 100 || amt > 100000)System.out.println("Min is 100 and max is 1L");
+		if(amt < 100 || amt > 500000)System.out.println("Min is 100 and max is 5L");
 		this.setBal(this.getBal() + amt);
 		
 	}
 
 	@Override
 	void withdraw(int amt) {
-		if(amt < 100 || amt > 10000)System.out.println("Min is 100 and max is 10000");
-		if(amt > this.getBal())System.out.println("your balance is " + this.getBal());
+		if(amt < 100 || amt > 100000)System.out.println("Min is 100 and max is 1L");
+		if(amt > this.getBal())System.out.println("your balance is " + this.getBal() + "Please enter within your balance");
 		this.setBal(this.getBal() - amt);
 		
 	}
