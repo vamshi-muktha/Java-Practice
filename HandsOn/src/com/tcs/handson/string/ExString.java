@@ -1,4 +1,4 @@
-package com.tcs.sample.string;
+package com.tcs.handson.string;
 
 public class ExString {
 	public static void main(String[] args) {

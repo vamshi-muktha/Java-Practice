@@ -1,4 +1,4 @@
-package com.tcs.sample.string;
+package com.tcs.handson.string;
 
 import java.util.HashMap;
 

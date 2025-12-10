@@ -1,4 +1,4 @@
-package com.tcs.sample.abstracthandson;
+package com.tcs.handson.abstracthandson;
 
 public class Manager extends Employee {
 	public Manager(int eno, String ename) {

@@ -1,4 +1,4 @@
-package com.tcs.sample.abstracthandson;
+package com.tcs.handson.abstracthandson;
 
 public abstract class Employee {
 	private int eno;
