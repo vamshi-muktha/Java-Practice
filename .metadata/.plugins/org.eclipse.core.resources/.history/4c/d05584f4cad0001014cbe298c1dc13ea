@@ -1,9 +1,0 @@
-package com.tcs.sample.basics;
-
-public class Sample {
-	public static void main(String[] args) {
-		Employee e1 = new Employee();
-		e1.setValues(100, "navin", 10000);
-		e1.displayInfo();
-	}
-}

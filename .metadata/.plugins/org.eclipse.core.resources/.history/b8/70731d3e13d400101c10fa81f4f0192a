@@ -1,7 +1,0 @@
-package com.tcs.sample.exceptions;
-
-public class ThrowExample {
-public void div(int a, int b) throws ArithmeticException{
-	
-}
-}

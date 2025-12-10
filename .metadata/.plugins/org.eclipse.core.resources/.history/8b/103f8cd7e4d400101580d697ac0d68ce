@@ -1,8 +1,0 @@
-package com.tcs.assessment.week2;
-
-public class ExEmployee {
-	public static void main(String[] args) {
-		Employee e1 = new Employee();
-		Employee e2 = new Employee(11, "Rohit", 70000, "Permanent");
-	}
-}

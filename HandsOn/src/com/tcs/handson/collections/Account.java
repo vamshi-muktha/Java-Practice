@@ -4,11 +4,13 @@ public class Account implements Comparable<Account>{
 	private int accNo;
 	private String accName;
 	private int bal;
-	public Account(int accNo, String accName, int bal) {
+	private String custId;
+	public Account(int accNo, String accName, int bal, String cusId) {
 		super();
 		this.accNo = accNo;
 		this.accName = accName;
 		this.bal = bal;
+		this.custId = cusId;
 	}
 	public int getAccNo() {
 		return accNo;
@@ -30,11 +32,17 @@ public class Account implements Comparable<Account>{
 	}
 	@Override
 	public String toString() {
-		return "Account [accNo=" + accNo + ", accName=" + accName + ", bal=" + bal + "]";
+		return "Account [accNo=" + accNo + ", accName=" + accName + ", bal=" + bal + ", cusId=" + custId + "]";
 	}
 	@Override
 	public int compareTo(Account ac) {
 		return this.bal - ac.bal;
+	}
+	public String getCustId() {
+		return custId;
+	}
+	public void setCustId(String custId) {
+		this.custId = custId;
 	}
 	
 	

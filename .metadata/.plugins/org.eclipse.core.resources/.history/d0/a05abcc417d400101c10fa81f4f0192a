@@ -1,5 +1,0 @@
-package com.tcs.handson.exception;
-
-public class ValidatePassword {
-
-}
