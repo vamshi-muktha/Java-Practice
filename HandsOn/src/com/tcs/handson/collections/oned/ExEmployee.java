@@ -21,7 +21,7 @@ public class ExEmployee {
 		s1.add(new Employee(3, "Dhoni", 40000));
 		s1.add(new Employee(4, "Shikhar", 90000));
 		System.out.println(s1);
-		System.out.println("Descending Order---------------------------------------------");
+		System.out.println("Descending Order------------------------------------------------------------");
 		Set<Employee> s2 = new TreeSet<>((a, b) -> b.getEname().compareTo(a.getEname()));
 		s2.add(new Employee(1, "Virat", 10000));
 		s2.add(new Employee(2, "Rohit", 20000));

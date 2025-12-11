@@ -27,6 +27,21 @@ public class CollectionsHandon {
 		System.out.println("------------------------------------------------------------------------");
 
 
+		
+		ArrayList<Integer> al3 = new ArrayList<>(Arrays.asList(1, 5, 7, 7, 3, 9, 2));
+		ArrayList<Integer> al4 = new ArrayList<>(Arrays.asList(9, 2, 6, 3, 9, 2, 7));
+		Set<Integer> res1 = new HashSet<>();
+		int sum1 = 0;
+		for(int i = 0; i < al3.size(); i++) {
+			if(al4.contains(al3.get(i))) {
+				res1.add(al3.get(i));
+				sum1 += al3.get(i);
+			}
+		}
+		System.out.println("Second Answer\n");
+		System.out.println(res1 + "sum = " + sum1);
+		System.out.println("------------------------------------------------------------------------");
+
 		ArrayList<Integer> al1 = new ArrayList<>(Arrays.asList(1, 5, 7, 7, 3, 9, 2));
 		ArrayList<Integer> al2 = new ArrayList<>(Arrays.asList(9, 2, 6, 3, 9, 2, 7));
 		List<Integer> res = new ArrayList<>();
@@ -38,23 +53,12 @@ public class CollectionsHandon {
 				res.add(al2.get(i));
 			}
 		}
-		System.out.println("Second Answer\n");
+		System.out.println("Third Answer\n");
 		System.out.println(res);
 		System.out.println("------------------------------------------------------------------------");
 
 
-		ArrayList<Integer> al3 = new ArrayList<>(Arrays.asList(1, 5, 7, 7, 3, 9, 2));
-		ArrayList<Integer> al4 = new ArrayList<>(Arrays.asList(9, 2, 6, 3, 9, 2, 7));
-		Set<Integer> res1 = new HashSet<>();
-		for(int i = 0; i < al3.size(); i++) {
-			if(al4.contains(al3.get(i))) {
-				res1.add(al3.get(i));
-			}
-		}
-		System.out.println("Third Answer\n");
-		System.out.println(res1);
-		System.out.println("------------------------------------------------------------------------");
-
+		
 
 		int[] arr = new int[10];
 		for(int i = 0; i < 10; i++) {
@@ -92,14 +96,8 @@ public class CollectionsHandon {
 	}
 
 	private static boolean isPrime(int i) {
-		if(i == 0 || i == 1) {
-			return false;
-		}
-		for(int j = 2; j < Math.sqrt(i); j++) {
-			if(i % 2 == 0) {
-				return false;
-			}
-		}
+		if(i == 0 || i == 1) return false;
+		for(int j = 2; j < Math.sqrt(i); j++) if(i % 2 == 0) return false;
 		return true;
 	}
 }
