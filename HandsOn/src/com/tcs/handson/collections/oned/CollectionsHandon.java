@@ -30,7 +30,7 @@ public class CollectionsHandon {
 		
 		ArrayList<Integer> al3 = new ArrayList<>(Arrays.asList(1, 5, 7, 7, 3, 9, 2));
 		ArrayList<Integer> al4 = new ArrayList<>(Arrays.asList(9, 2, 6, 3, 9, 2, 7));
-		Set<Integer> res1 = new HashSet<>();
+		List<Integer> res1 = new ArrayList<>();
 		int sum1 = 0;
 		for(int i = 0; i < al3.size(); i++) {
 			if(al4.contains(al3.get(i))) {
@@ -85,6 +85,15 @@ public class CollectionsHandon {
 			hs.add(i);
 		}
 		for(int i : arr2) {
+			if(hs.contains(i)) {
+				res3.add(i);
+			}
+		}
+		hs.clear();
+		for(int i : arr2) {
+			hs.add(i);
+		}
+		for(int i : arr1) {
 			if(hs.contains(i)) {
 				res3.add(i);
 			}
