@@ -17,7 +17,7 @@ public class Jdbc {
 			ResultSet rs = st.executeQuery("select * from employees");
 
 //			int i = st.executeUpdate("insert into employees values(\"Ram\", 1 , 8990)");
-			
+
 			while(rs.next()) {
 				System.out.println(rs.getString(1) + " "+rs.getString(2)+ " "+ rs.getString(3));
 			}

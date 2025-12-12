@@ -6,10 +6,10 @@ public class ExMessage {
 		m1.giveMessage();
 		Message m2 = () -> {System.out.println("Good Afternoon");};
 		m2.giveMessage();
-		
+
 		m1.m1();
 		Message.m2();
-	
-		
+
+
 	}
 }

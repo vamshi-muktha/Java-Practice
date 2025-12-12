@@ -6,5 +6,5 @@ public class ExSuperKey {
 		System.out.println("-----------------------------------");
 		Child c2 = new Child(10, 20);
 	}
-	
+
 }

@@ -7,13 +7,13 @@ public class Example {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter any inps");
-		
+
 		try {
 			int a = sc.nextInt();
 			int b = sc.nextInt();
-			
+
 			int c = a/b;
-			
+
 			System.out.println("div is " + c);
 		}
 		catch(InputMismatchException ime) {
@@ -26,5 +26,5 @@ public class Example {
 			System.out.println("give only numbers");
 		}
 	}
-	 
+
 }

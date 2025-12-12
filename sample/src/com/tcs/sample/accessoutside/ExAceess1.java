@@ -5,7 +5,7 @@ import com.tcs.sample.constructor.C1;
 //import com.tcs.sample.access.C1;
 
 public class ExAceess1 extends C1 {
-	
+
 //	void m1() {
 //		System.out.println(c);
 //	}

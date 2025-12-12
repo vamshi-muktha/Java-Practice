@@ -11,7 +11,7 @@ public class Employee {
 		this.ename = ename;
 		this.sal = sal;
 	}
-	
+
 	public Employee(int eno, String ename) {
 		super();
 		this.eno = eno;

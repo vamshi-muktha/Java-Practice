@@ -14,8 +14,7 @@ public class SafeMap {
 			System.out.println(i + " " + m.get(i));
 			m.put(5, "five");
 		}
-		
+
 		System.out.println("size is " + m.size() + " "+ m);
 	}
 }
- 

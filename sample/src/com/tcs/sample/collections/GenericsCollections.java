@@ -44,7 +44,7 @@ public class GenericsCollections {
 
 		System.out.println(ll);
 
-		
+
 		System.out.println("sets ----------------------------------------------------");
 		Set<Double> s = new HashSet<>();
 		s.add(10.0);
@@ -70,7 +70,7 @@ public class GenericsCollections {
 			System.out.println(obj);
 		}
 
-		
+
 		System.out.println("TreeSet -----------------------------------------------------");
 		Set<Integer> ss = new TreeSet<>();
 		ss.add(10);
@@ -91,16 +91,22 @@ public class GenericsCollections {
 		for (Object obj : ss) {
 			System.out.println(obj.getClass().getName());
 		}
-		
-		
+
+
 		ArrayList<Integer> al = new ArrayList<>();
 		int sum = 0;
-		for(int i = 0; i < 20; i++)al.add(i+1);
-		for(int i : al)if(i % 2 != 0)sum += i;
+		for(int i = 0; i < 20; i++) {
+			al.add(i+1);
+		}
+		for(int i : al) {
+			if(i % 2 != 0) {
+				sum += i;
+			}
+		}
 		System.out.println("Odd sum " + sum);
-		
-		
-		
+
+
+
 		System.out.println("Maps ----------------------------------");
 		Map<Integer, String> hm = new HashMap<>();
 		hm.put(1, "abd");
@@ -108,22 +114,22 @@ public class GenericsCollections {
 		hm.put(3, "Rohit");
 		hm.put(4, "Rahul");
 		hm.put(5, "Gambhir");
-		
+
 		System.out.println(hm.get(2));
-		
+
 		System.out.println(hm.size());
-		
+
 		System.out.println(hm.remove(4));
-		
+
 		for(Integer i : hm.keySet()) {
 			System.out.println(i + " " + i.getClass().getName() + "     " + hm.get(i) + " "  + hm.get(i).getClass().getName());
 		}
-		
+
 		for(String str : hm.values()) {
 			System.out.println(str);
 		}
 //		Map
-		
+
 		for(Map.Entry<Integer, String> me: hm.entrySet()) {
 			System.out.println(me.getKey() + " " + me.getValue());
 		}

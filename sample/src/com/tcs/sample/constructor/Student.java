@@ -6,12 +6,12 @@ public class Student {
 	int m1;
 	int m2;
 	int m3;
-	
+
 	public Student(int sno, String sname) {
 		this.sno = sno;
 		this.sname = sname;
 	}
-	
+
 	public Student() {
 		// TODO Auto-generated constructor stub
 	}
@@ -21,7 +21,7 @@ public class Student {
 		this.m2 = m2;
 		this.m3 = m3;
 	}
-	
+
 	void displayStDetails() {
 		System.out.println(sno + " " + sname);
 	}

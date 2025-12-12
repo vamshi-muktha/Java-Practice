@@ -21,6 +21,6 @@ public class Account {
 	public String toString() {
 		return "Account [accNo=" + accNo + ", accName=" + accName + ", bal=" + bal + ", ifsc=" + ifsc + "]";
 	}
-	
-	
+
+
 }

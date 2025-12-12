@@ -12,7 +12,7 @@ public class FileWrite {
 			String s = "Hii how are you";
 			byte[] b = s.getBytes();
 			fos.write(b);
-			
+
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			System.out.println("location is wrong");
@@ -28,15 +28,15 @@ public class FileWrite {
 				System.out.println("something went wrong with close1");
 			}
 		}
-		
-		
-		
+
+
+
 		try (FileOutputStream fos1 = new FileOutputStream("/home/labuser/Desktop/myfiles/t2.txt");){
-			
+
 			String s = "Hii how are you";
 			byte[] b = s.getBytes();
 			fos1.write(b);
-			
+
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			System.out.println("location is wrong");
@@ -44,7 +44,7 @@ public class FileWrite {
 			// TODO Auto-generated catch block
 			System.out.println("something went wrong");
 		}
-		
-		
+
+
 	}
 }

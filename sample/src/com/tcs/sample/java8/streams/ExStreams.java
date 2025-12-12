@@ -63,17 +63,17 @@ public class ExStreams {
 				.collect(Collectors.toList());
 		System.out.println("Desc Sorted Names 2: " + descSortedNames2);
 
-		
+
 //		Take one list and count even numbers
 		List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
 		long count = numbers.stream().filter(x -> x % 2 == 0).count();
 		System.out.println("Count of Even Numbers: " + count);
-		
-		
+
+
 //		square each number in numbers list and collect to a new list
 		List<Integer> sq = numbers.stream().map(x -> x * x).collect(Collectors.toList());
 		System.out.println("Squared Numbers: " + sq);
-		
+
 //		find even multiply with 3 and sort and collect
 		List<Integer> m3sc = numbers.stream()
 				.filter(x -> x % 2 == 0)
@@ -81,69 +81,69 @@ public class ExStreams {
 				.sorted()
 				.collect(Collectors.toList());
 		System.out.println("Processed Numbers: " + m3sc);
-		
+
 //		skip and limit
 		List<Integer> skipLimit = numbers.stream()
 				.skip(2) // skip first 2 elements
 				.limit(5) // take next 5 elements
 				.collect(Collectors.toList());
 		System.out.println("Skip 2 and Limit 5: " + skipLimit);
-		
+
 //		wap to find 3rd max number
 		List<Integer> thirdMax = numbers.stream()
 				.sorted(Comparator.reverseOrder())
 				.skip(2)
 				.limit(1).collect(Collectors.toList());
 		System.out.println("3rd Max Number: " + thirdMax);
-		
-		
+
+
 //		AnyMatch Example
 		boolean hasHighSalary = al1.stream().anyMatch(x -> x.getBal() > 10000);
 		System.out.println("Any Employee with salary > 10000: " + hasHighSalary);
-		
+
 //		AllMatch Example
 		boolean allHighSalary = al1.stream().allMatch(x -> x.getBal() > 5000);
 		System.out.println("All Employees with salary > 5000: " + allHighSalary);
-		
-		
+
+
 //		NoneMatch Example
 		boolean noneLowSalary = al1.stream().noneMatch(x -> x.getBal() < 1000);
 		System.out.println("No Employee with salary < 1000: " + noneLowSalary);
-		
+
 //		min and max in list of numbers
 		Integer minNum = numbers.stream().min((x, y) -> x - y).orElse(null);
 		System.out.println("Minimum Number: " + minNum);
-		
+
 		Integer maxNum = numbers.stream().max(Integer::compare).orElse(null);
 		System.out.println("Maximum Number: " + maxNum);
-		
-		
+
+
 		Employee minSalEmp = al1.stream().min(Comparator.comparing(Employee::getBal)).orElse(null);
 		System.out.println("Employee with Minimum Salary: " + minSalEmp);
-		
+
 		Employee maxSalEmp = al1.stream().max(Comparator.comparing(Employee::getBal)).orElse(null);
 		System.out.println("Employee with Maximum Salary: " + maxSalEmp);
-		
+
 //		findFirstExample
 		Integer firstEven = numbers.stream().filter(x -> x % 2 == 0).findFirst().orElse(null);
 		System.out.println("First Even Number: " + firstEven);
-		
+
 		Employee firstHighSalEmp = al1.stream().filter(x -> x.getBal() > 5000).findFirst().orElse(null);
 		System.out.println("First Employee with Salary > 5000: " + firstHighSalEmp);
-		
-		
+
+
 //		reduce
 		Integer sum = numbers.stream().reduce(100, (a, b) -> a + b);
 		System.out.println("Sum of Numbers: " + sum);
-		
+
 		Integer product = numbers.stream().reduce(1, (a, b) -> a * b);
 		System.out.println("Product of Numbers: " + product);
-		
+
 		Integer maxUsingReduce = numbers.stream().reduce(Integer::max).orElse(null);
 		System.out.println("Maximum using Reduce: " + maxUsingReduce);
-		
+
 		Integer minUsingReduce = numbers.stream().reduce(Integer::min).orElse(null);
 		System.out.println("Minimum using Reduce: " + minUsingReduce);
-		
+
 	}
 }

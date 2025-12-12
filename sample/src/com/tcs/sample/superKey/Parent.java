@@ -6,7 +6,7 @@ public class Parent extends GrandParent {
 	}
 	Parent(int a, int b){
 		super(a, b);
-		
+
 		System.out.println("This is Parent parameter");
 	}
 }

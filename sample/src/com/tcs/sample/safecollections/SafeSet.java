@@ -17,7 +17,7 @@ public class SafeSet {
 		}catch(Exception e) {
 			System.err.println(e);
 		}
-			
+
 		System.out.println("size is " + s.size() + "    "+s);
 	}
 }

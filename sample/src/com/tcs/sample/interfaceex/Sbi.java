@@ -4,7 +4,7 @@ public class Sbi extends Bank {
 	@Override
 	public void deposit() {
 		System.out.println("Min is 100");
-		
+
 	}
 
 	@Override
@@ -12,5 +12,5 @@ public class Sbi extends Bank {
 		// TODO Auto-generated method stub
 		System.out.println("Min is 10");
 	}
-	
+
 }

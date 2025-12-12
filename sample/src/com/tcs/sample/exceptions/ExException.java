@@ -8,17 +8,19 @@ public class ExException {
 		System.out.println("Enter un, pass");
 		String un = sc.next();
 		String pass = sc.next();
-		
+
 		ValidateUser vu = new ValidateUser();
-		
+
 		try {
-			if(vu.validate(un, pass))System.out.println("Welcome to the Application");
-			
+			if(vu.validate(un, pass)) {
+				System.out.println("Welcome to the Application");
+			}
+
 		} catch (LoginException e) {
 			System.err.println("Invalid user");
 		}
-		
+
 		sc.close();
 	}
-	
+
 }

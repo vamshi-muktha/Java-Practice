@@ -6,38 +6,38 @@ public class Sample {
 //		Employee e1 = new Employee();
 //		Employee e2 = new Employee(1, "navin", 25000);
 //		Employee e3 = new Employee(1, "navin");
-		
+
 //		System.out.println(e1.toString());
 //		System.out.println(e2.toString());
 //		System.out.println(e3.toString());
-		
+
 //		Student s1 = new Student();
 //		Student s2 = new Student(1, "navin");
 //		Student s3 = new Student(2, "Ram");
-//		
+//
 //		s1.displayStDetails();
 //		s1.displayStDetails();
 //		Student.displaySchoolAdd();
-//		
+//
 //		s2.setMarks(9, 10, 8);
-//		
+//
 //		s2.displayStDetails();
 //		s2.displayPer();
-//		
+//
 //		s3.setMarks(50, 80, 90);
-//		
+//
 //		s3.displayStDetails();
 //		s3.displayPer();
 //		Student.displaySchoolAdd();
-		
+
 //		Account ac = new Account(101, "icici", 100, "icici001");
-//		
+//
 //		System.out.println(ac.toString());
-		
+
 //		C obj = new C();
 //		C obj1 = new C(1);
 //		C obj2 = new C(1, 2);
 //		C obj3 = new C(1, 2, 3);
-		
+
 	}
 }

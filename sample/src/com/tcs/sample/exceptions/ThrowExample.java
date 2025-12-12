@@ -7,6 +7,6 @@ public void div(int a, int b) throws ArithmeticException{
 		throw ae;
 	}
 	System.out.println("Values " + a  + " " + b);
-	
+
 }
 }

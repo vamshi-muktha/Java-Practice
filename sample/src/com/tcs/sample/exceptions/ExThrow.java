@@ -5,11 +5,11 @@ public class ExThrow {
 		try {
 			ThrowExample te = new ThrowExample();
 			te.div(10, -11);
-			
+
 		}
 		catch(Exception e){
 			System.err.println("dont give neg vales");
 		}
-		
+
 	}
 }

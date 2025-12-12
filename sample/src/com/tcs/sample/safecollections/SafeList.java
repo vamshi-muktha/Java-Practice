@@ -13,6 +13,6 @@ public class SafeList {
 			al.add(13);
 		}
 		System.out.println("Length is " + al.size() + "   " + al);
-		
+
 	}
 }

@@ -6,6 +6,6 @@ public class ExOperator {
 		obj.ope(10, 20);
 		obj = new subOperator();
 		obj.ope(10, 20);
-		
+
 	}
 }

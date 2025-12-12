@@ -4,30 +4,30 @@ public class Employee {
 	int eno;
 	String ename;
 	int sal;
-	
+
 //	Employee(){
 //		eno = 0;
 //		ename = "Unknown";
 //		sal = 0;
 //	}
-	
+
 	public Employee(int eno, String ename, int sal) {
 		super();
 		this.eno = eno;
 		this.ename = ename;
 		this.sal = sal;
 	}
-	
+
 	public Employee() {
 		// TODO Auto-generated constructor stub
 	}
-	
+
 	void setValues(int no, String name, int s) {
 		eno = no;
 		ename = name;
 		sal = s;
 	}
-	
+
 	void displayInfo() {
 		System.out.println(eno + " " + ename + " " + sal);
 	}
@@ -36,5 +36,5 @@ public class Employee {
 	public String toString() {
 		return "Employee [eno=" + eno + ", ename=" + ename + ", sal=" + sal + "]";
 	}
-	
+
 }
