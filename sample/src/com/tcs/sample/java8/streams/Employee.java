@@ -4,12 +4,24 @@ public class Employee {
 	private int eno;
 	private String ename;
 	private int bal;
+	private String depno;
 	public Employee(int eno, String ename, int bal) {
 		super();
 		this.eno = eno;
 		this.ename = ename;
 		this.bal = bal;
 	}
+	
+	
+	public Employee(int eno, String ename, int bal, String depno) {
+		super();
+		this.eno = eno;
+		this.ename = ename;
+		this.bal = bal;
+		this.depno = depno;
+	}
+
+
 	public int getEno() {
 		return eno;
 	}
@@ -31,6 +43,12 @@ public class Employee {
 	@Override
 	public String toString() {
 		return "Employee [eno=" + eno + ", ename=" + ename + ", bal=" + bal + "]";
+	}
+	public String  getDepno() {
+		return depno;
+	}
+	public void setDepno(String depno) {
+		this.depno = depno;
 	}
 
 

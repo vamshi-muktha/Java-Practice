@@ -1,8 +1,11 @@
 package com.tcs.sample.java8.streams;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
+import java.util.Map;
+import java.util.function.ToIntFunction;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -10,12 +13,12 @@ import java.util.stream.Stream;
 public class ExStreams {
 	public static void main(String[] args) {
 
-//		List<Integer> al = Arrays.asList(1, 2, 3, 4, 9, 88, 77, 66, 55);
-//		Stream<Integer> s1 = al.stream();
-//		Stream<Integer> s2 = s1.filter(x -> x>=10);
-//		Stream<Integer> s3 = s2.filter(x -> x%11 == 0);
-//		s3.forEach(x->System.out.println(x));
-//		al.stream().filter(x -> x>=10).filter(x -> x%11 == 0).forEach(x -> System.out.println(x));
+		List<Integer> al = Arrays.asList(1, 2, 3, 4, 9, 88, 77, 66, 55);
+		Stream<Integer> s1 = al.stream();
+		Stream<Integer> s2 = s1.filter(x -> x>=10);
+		Stream<Integer> s3 = s2.filter(x -> x%11 == 0);
+		s3.forEach(x->System.out.println(x));
+		al.stream().filter(x -> x>=10).filter(x -> x%11 == 0).forEach(x -> System.out.println(x));
 
 //		forEach Method
 		List<Employee> al1 = Util.getEmps();
@@ -144,6 +147,33 @@ public class ExStreams {
 
 		Integer minUsingReduce = numbers.stream().reduce(Integer::min).orElse(null);
 		System.out.println("Minimum using Reduce: " + minUsingReduce);
+		
+//		ToMap Example
+		
+		Map<Integer, String> hm = al1.stream().collect(Collectors.toMap(x -> x.getEno(), y -> y.getEname()));
+		
+		System.out.println(hm);
+		
+//		GroupBy Example
+		List<Employee> al5 = Util.getEmpsWithDept();
+		Map<String, List<Employee>> hm1 = al5.stream().collect(Collectors.groupingBy(x -> x.getDepno()));
+		
+		System.out.println(hm1);
+		
+//		Joining Example
+		List<String> al4 = Arrays.asList("Apple", "Banana", "Orange");
+		System.out.println(al4.stream().collect(Collectors.joining()));
+		System.out.println(al4.stream().collect(Collectors.joining(",")));
+		
+//		Summing
+//		ToIntFunction<T>
+		int res6 = al.stream().collect(Collectors.summingInt(x->x));
+		System.out.println(res6);
+		
+		Double avgsal = al1.stream().collect(Collectors.averagingInt(x -> x.getBal()));
+		System.out.println(avgsal);
+		
+		
 
 	}
 }

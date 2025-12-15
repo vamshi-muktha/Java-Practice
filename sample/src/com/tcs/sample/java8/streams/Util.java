@@ -14,6 +14,17 @@ public class Util {
 
 		return al;
 	}
+	
+	static List<Employee> getEmpsWithDept(){
+		List<Employee> al = new ArrayList<>();
+		al.add(new Employee(101, "Virat", 3000, "Hr"));
+		al.add(new Employee(102, "Rohit", 5000, "Hr"));
+		al.add(new Employee(103, "Dhoni", 9000, "Dev"));
+		al.add(new Employee(104, "Rahul", 2000, "Dev"));
+		al.add(new Employee(105, "Kohli", 11000, "tester"));
+
+		return al;
+	}
 
 
 }
