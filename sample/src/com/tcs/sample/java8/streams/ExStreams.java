@@ -1,12 +1,12 @@
 package com.tcs.sample.java8.streams;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
-import java.util.function.ToIntFunction;
+import java.util.Optional;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 @SuppressWarnings("unused")
@@ -109,12 +109,13 @@ public class ExStreams {
 		System.out.println("All Employees with salary > 5000: " + allHighSalary);
 
 
+		
 //		NoneMatch Example
 		boolean noneLowSalary = al1.stream().noneMatch(x -> x.getBal() < 1000);
 		System.out.println("No Employee with salary < 1000: " + noneLowSalary);
 
 //		min and max in list of numbers
-		Integer minNum = numbers.stream().min((x, y) -> x - y).orElse(null);
+		Integer minNum = numbers.stream().min((x, y) -> x - y).get();
 		System.out.println("Minimum Number: " + minNum);
 
 		Integer maxNum = numbers.stream().max(Integer::compare).orElse(null);
@@ -173,7 +174,31 @@ public class ExStreams {
 		Double avgsal = al1.stream().collect(Collectors.averagingInt(x -> x.getBal()));
 		System.out.println(avgsal);
 		
+//		IntStream
+		IntStream is1 = IntStream.rangeClosed(1, 10);
+		is1.forEach(System.out::println);
 		
+		is1 = IntStream.rangeClosed(1, 10);
+		
+		is1.forEach(x -> {
+			IntStream is2 = IntStream.rangeClosed(1, x);
+			is2.forEach(y -> System.out.print("*"));
+			System.out.println();
+		});
+		
+//		Optional Example
+		Optional<String> ops = Optional.empty();
+		if(ops.isEmpty())System.out.println("Object not present");
+		else System.out.println("Object is present");
+		
+		Employee e2 = new Employee(12, "Vamshi", 9000);
+		Optional<Employee> ope = Optional.of(e2);
+		if(ope.isEmpty())System.out.println("Object not present");
+		else System.out.println("Object is present");
+		
+		ope.ifPresentOrElse(x -> System.out.println("Object is there"), () -> System.out.println("Employee is not there"));
+		
+		ope.ifPresentOrElse(x -> System.out.println(x.getEno() + " " + x.getEname() + " " + x.getBal()), () -> System.out.println("Employee is not there"));
 
 	}
 }

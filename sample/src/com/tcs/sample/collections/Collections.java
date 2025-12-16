@@ -21,7 +21,7 @@ public class Collections {
 
 		System.out.println(list.size());
 
-		list.remove(10);
+		list.remove(new Integer(10));
 		list.remove(1);
 
 		System.out.println(list);
